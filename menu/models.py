@@ -6,6 +6,12 @@ from django.db import models
 class DishType(models.Model):
     name = models.CharField(max_length=255, unique=True)
 
+    class Meta:
+        ordering = ["name"]
+
+    def __str__(self):
+        return f"{self.name}"
+
 
 class Cook(AbstractUser):
     years_of_experience = models.IntegerField(max_length=63, null=True, blank=True)
