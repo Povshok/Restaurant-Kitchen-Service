@@ -8,3 +8,4 @@ class DishType(models.Model):
 
 class Cook(AbstractUser):
     years_of_experience = models.IntegerField(max_length=63, null=True, blank=True)
+
