@@ -30,3 +30,9 @@ class Dish(models.Model):
         settings.AUTH_USER_MODEL,
         related_name="cooks"
     )
+
+    class Meta:
+        ordering = ["name"]
+
+    def __str__(self):
+        return f"{self.name} {self.price}"
